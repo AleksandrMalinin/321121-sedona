@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Aleksandr Malinin](https://up.htmlacademy.ru/htmlcss/16/user/321121).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Масленко](https://up.htmlacademy.ru/htmlcss/16/user/107049).
 
 ---
 
