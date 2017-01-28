@@ -7,14 +7,14 @@ body {
 }
 
 h1 {
-  font-size: 21px;
   line-height: 1.2em;
-  color: #000;
-
 }
 
 h2 {
-  font-size: 21px;
   line-height: 1em;
+}
+
+h1, h2 {
+  font-size: 21px;
   color: #000;
 }
