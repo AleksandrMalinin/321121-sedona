@@ -18,3 +18,191 @@ h1, h2 {
   font-size: 21px;
   color: #000;
 }
+
+/*header*/
+
+li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  outline: 1px solid red;
+}
+
+.main-navigation {
+  padding: 0 73px;
+  outline: 1px solid blue;
+}
+
+.header-logo {
+  width: 140px;
+  outline: 1px solid blue;
+}
+
+/*main*/
+
+.promo {
+  min-height: 508px;
+  margin: 0px;
+  outline: 1px solid blue;
+}
+
+.features {
+  outline: 1px solid black;
+}
+
+.intro {
+  text-align: center;
+  width: 1200px;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid blue;
+}
+
+.block1,
+.block2,
+.block3,
+.block4 {
+  margin: 0px;
+  outline: 1px solid blue;
+}
+
+.reason1 {
+  float: left;
+  width: 400px;
+  height: 257px;
+  outline: 1px solid blue;
+}
+
+.block1 img {
+  float: right;
+  width: 800px;
+}
+
+.reason2 {
+  float: right;
+  width: 400px;
+  height: 257px;
+  outline: 1px solid blue;
+}
+
+.block3 img {
+  float: left;
+  width: 800px;
+}
+
+.block4 {
+  min-height: 257px;
+}
+
+.search {
+  position: relative;
+  text-align: center;
+  min-height: 765px;
+  padding-top:
+  outline: 1px solid blue;
+}
+
+.form {
+  position: absolute;
+  top: 290px;
+  left: 312px;
+  width: 576px;
+  min-height: 364px;
+  outline: 1px solid blue;
+  background-color: white;
+}
+
+input {
+  display: inline-block;
+}
+
+.input[type:date] {
+  width: 346;
+  height: 38px;
+}
+
+
+
+/*footer*/
+
+.tag {
+  float: left;
+  width: 240px;
+  height: 120px;
+  margin-left: 73px;
+  margin-right: 88px;
+  outline: 1px solid blue;
+}
+
+.footer-social {
+  float: left;
+  width: 400px;
+  height: 120px;
+  margin-right: 88px;
+  outline: 1px solid blue;
+}
+
+.footer-copyright {
+  float: left;
+  width: 240px;
+  height: 120px;
+  outline: 1px solid blue;
+}
+
+/*main sedona-hotels*/
+
+.search-container {
+  min-height: 217px;
+  margin: 0 73px;
+  outline: 1px solid blue;
+}
+
+fieldset {
+  display: inline-block;
+}
+
+input {
+  display: block;
+}
+
+label {
+  display: inline;
+}
+
+.filters {
+  height: 86px;
+  margin: 0 73px;
+  outline: 1px solid blue;
+}
+
+.hotel-list {
+  height: 453px;
+  margin: 0 73px;
+  outline: 1px solid blue;
+}
+
+table {
+  width: 1054px;
+  margin: 0 73px;
+}
+
+tr {
+  min-height: 151px;
+  padding-top: 30px;
+  outline: 1px solid blue;
+}
+
+td {
+  padding: 30px 0;
+}
