@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -21,38 +27,70 @@ h1, h2 {
 
 /*header*/
 
-li {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .clearfix::after {
   content: "";
-  display: table;
+  display: block;
   clear: both;
 }
 
 .container {
   width: 1200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 72px;
   outline: 1px solid red;
 }
 
 .main-navigation {
-  padding: 0 73px;
+  position: relative;
+  min-height: 56px;
   outline: 1px solid blue;
 }
 
+.main-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-menu-item {
+  float: left;
+  width: 20%;
+}
+
+.main-menu-item:nth-child(n+3) {
+  float: right;
+}
+
+.main-menu-item:nth-child(3) {
+  text-align: right;
+}
+
+.main-menu-item:last-child {
+  text-align: right;
+}
+
 .header-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 140px;
   outline: 1px solid blue;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 /*main*/
 
 .promo {
   min-height: 508px;
-  margin: 0px;
+  margin-bottom: 0;
+  outline: 1px solid blue;
+}
+
+.intro {
+  text-align: center;
+  min-height: 209px;
   outline: 1px solid blue;
 }
 
@@ -60,149 +98,280 @@ li {
   outline: 1px solid black;
 }
 
-.intro {
-  text-align: center;
-  width: 1200px;
-  margin: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  outline: 1px solid blue;
-}
-
-.block1,
-.block2,
-.block3,
-.block4 {
-  margin: 0px;
-  outline: 1px solid blue;
-}
-
 .reason1 {
   float: left;
-  width: 400px;
-  height: 257px;
+  width: 34%;
+  padding: 0 30px;
+  min-height: 256px;
+  text-align: center;
   outline: 1px solid blue;
 }
 
-.block1 img {
+.features-block1 img {
   float: right;
-  width: 800px;
+  width: 66%;
+}
+
+.features-block2,
+.features-block4 {
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+}
+
+.features-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+  font-size: 14px;
+  padding: 0 20px;
+  outline: 1px solid blue;
+}
+
+.features-block2 .features-item{
+  min-height: 330px;
+}
+
+.features-block1,
+.features-block2,
+.features-block3,
+.features-block4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  outline: 1px solid blue;
 }
 
 .reason2 {
   float: right;
-  width: 400px;
-  height: 257px;
+  width: 34%;
+  padding: 0 30px;
+  min-height: 256px;
+  text-align: center;
   outline: 1px solid blue;
 }
 
-.block3 img {
+.features-block3 img {
   float: left;
-  width: 800px;
+  width: 66%;
 }
 
-.block4 {
-  min-height: 257px;
+.offer {
+  position: relative;
+  min-height: 292px;
+  text-align: center;
+  outline: 1px solid blue;
+}
+
+.offer .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 575px;
+  min-height: 85px;
+  outline: 1px solid blue;
 }
 
 .search {
   position: relative;
   text-align: center;
-  min-height: 765px;
-  padding-top:
   outline: 1px solid blue;
 }
 
-.form {
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.hotels-form {
   position: absolute;
-  top: 290px;
-  left: 312px;
-  width: 576px;
-  min-height: 364px;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 575px;
+  min-height: 395px;
+  padding: 55px;
+  font-weight: 700;
+  background-color: #fff;
   outline: 1px solid blue;
-  background-color: white;
 }
 
-input {
+.hotels-form .pull-left,
+.hotels-form .pull-right {
+  max-width: 50%;
+  font-size: 0;
+}
+
+.hotels-form label,
+.hotels-form input {
   display: inline-block;
+  font-size: 14px;
 }
 
-.input[type:date] {
-  width: 346;
+.hotels-form .date-label {
+  width: 120px;
+}
+
+.hotels-form .number-label {
+  width: 120px;
+}
+
+.hotels-form input {
   height: 38px;
+  border: none;
+  background-color: #f2f2f2;
 }
 
+.hotels-form input[type="date"] {
+  width: 345px;
+  margin-bottom: 30px;
+  padding: 13px;
+}
 
+.hotels-form input[type="number"] {
+  width: 38px;
+  text-align: center;
+}
+
+.hotels-form .btn {
+  width: 100%;
+  margin-top: 55px;
+}
 
 /*footer*/
 
 .tag {
   float: left;
-  width: 240px;
-  height: 120px;
-  margin-left: 73px;
-  margin-right: 88px;
+  width: 33%;
+  min-height: 120px;
+  text-align: center;
   outline: 1px solid blue;
 }
 
 .footer-social {
   float: left;
-  width: 400px;
-  height: 120px;
-  margin-right: 88px;
+  width: 33%;
+  min-height: 120px;
+  text-align: center;
   outline: 1px solid blue;
 }
 
 .footer-copyright {
   float: left;
-  width: 240px;
-  height: 120px;
+  width: 33%;
+  min-height: 120px;
+  text-align: center;
   outline: 1px solid blue;
 }
 
 /*main sedona-hotels*/
 
 .search-container {
-  min-height: 217px;
-  margin: 0 73px;
   outline: 1px solid blue;
 }
 
-fieldset {
-  display: inline-block;
+.search-form {
+  position: relative;
+  outline: 1px solid blue;
 }
 
-input {
-  display: block;
+.infrastructure {
+  float: left;
+  width: 241px;
+  min-height: 216px;
+  outline: 1px solid blue;
 }
 
-label {
-  display: inline;
+.type-accomodation {
+  float: left;
+  width: 475px;
+  min-height: 216px;
+  outline: 1px solid blue;
+}
+
+.price {
+  float: right;
+  width: 328px;
+  min-height: 216px;
+  outline: 1px solid blue;
+}
+
+.search-form .btn {
+  position: absolute;
+  top: 148px;
+  right: 95px;
+  width: 135px;
 }
 
 .filters {
-  height: 86px;
-  margin: 0 73px;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
   outline: 1px solid blue;
+}
+
+.search-form-results {
+  display: inline-block;
+  vertical-align: middle;
+  width: 240px;
+  min-height: 86px;
+  font-size: 14px;
+  outline: 1px solid blue;
+}
+
+.filters-menu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 816px;
+  min-height: 86px;
+  padding: 0;
+  font-size: 0px;
+  outline: 1px solid blue;
+}
+
+.filters-type {
+  display: inline-block;
+  font-size: 12px;
+  list-style: none;
+}
+
+.filters-type:nth-child(n+4) {
+  float: right;
 }
 
 .hotel-list {
   height: 453px;
-  margin: 0 73px;
   outline: 1px solid blue;
-}
-
-table {
-  width: 1054px;
-  margin: 0 73px;
 }
 
 tr {
   min-height: 151px;
-  padding-top: 30px;
   outline: 1px solid blue;
 }
 
 td {
   padding: 30px 0;
+  outline: 1px solid blue;
+}
+
+.description {
+  width: 921px;
+  padding-left: 30px;
+}
+
+.hotel-cell {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.rating-cell {
+  float: right;
+  width: 50%;
+  text-align: right;
 }
