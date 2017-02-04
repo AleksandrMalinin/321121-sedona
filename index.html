@@ -9,8 +9,8 @@
   <body>
     <header class="main-header">
       <div class="container">
-        <nav class="main-navigation clearfix">
-          <ul class="main-menu">
+        <nav class="main-navigation">
+          <ul class="main-menu clearfix">
             <li class="main-menu-item"><a href="#">Информация</a></li>
             <li class="main-menu-item"><a href="#">Фото и видео</a></li>
             <li class="main-menu-item"><a href="sedona-hotels.html">Гостиницы</a></li>
@@ -33,15 +33,15 @@
           <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</span>
         </div>
-        <div class="features-block1 clearfix">
-          <div class="reason1">
+        <div class="features-block">
+          <div class="reason">
             <h2>Настоящий городок</h2>
             <span>№1</span>
             <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <img src="img/layer-1.jpg" width="800" height="256" alt="image-1">
         </div>
-        <ul class="features-block2">
+        <ul class="features-block">
           <li class="features-item">
             <h2>Жилье</h2>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -55,15 +55,15 @@
             <p>Не только китайского, но и местного производства!</p>
           </li>
         </ul>
-        <div class="features-block3 clearfix">
+        <div class="features-block">
           <img src="img/layer-2.jpg" width="800" height="256" alt="image-2">
-          <div class="reason2">
+          <div class="reason">
             <h2>Там есть Мост Дьявола</h2>
             <span>№2</span>
             <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
           </div>
         </div>
-        <ul class="features-block4">
+        <ul class="features-block">
           <li class="features-item">
             <h2>Небольшая площадь</h2>
             <span>№3</span>
@@ -88,7 +88,7 @@
       </div>
       <section class="search map">
         <img src="img/map.jpg" width="768" height="593" alt="map">
-      <div class="form">
+      <div class="form clearfix">
         <form class="hotels-form" name="hotels-booking-form" action="?" method="get">
           <label for="arrival">Дата заезда:</label>
           <input type="date" name="arrival" value="" id="arrival">
@@ -96,14 +96,18 @@
           <label for="departure">Дата выезда:</label>
           <input type="date" name="departure" value="" id="departure">
           <i class="icon-calendar"></i>
+        <div class="adult-number">
           <label for="adult">Взрослые:</label>
           <button class="count">−</button>
           <input type="number" name="adult" min="1" max="10" value="2" id="adult">
           <button class="count">+</button>
+        </div>
+        <div class="children-number">
           <label for="children">Дети:</label>
           <button class="count">−</button>
           <input type="number" name="children" min="0" max="10" value="0" id="children">
           <button class="count">+</button>
+        </div>
           <input class="btn" type="submit" value="Найти">
         </form>
       </div>
@@ -115,9 +119,9 @@
           <a href="">#VisitSedona</a>
         </div>
         <div class="footer-social">
-          <a class="social-btn social-btn-twitter" href="#"></a>
-          <a class="social-btn social-btn-facebook" href="#"></a>
-          <a class="social-btn social-btn-youtube" href="#"></a>
+          <a class="social-btn social-btn-twitter" title="Мы в Twitter" href="#">Twitter</a>
+          <a class="social-btn social-btn-facebook" title="Мы на Facebook" href="#">Facebook</a>
+          <a class="social-btn social-btn-youtube" title="Мы на Youtube" href="#">Youtube</a>
         </div>
         <div class="footer-copyright">
           Website by

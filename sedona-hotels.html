@@ -13,8 +13,8 @@
         <ul class="main-menu">
           <li class="main-menu-item"><a href="#">Информация</a></li>
           <li class="main-menu-item"><a href="#">Фото и видео</a></li>
-          <li class="main-menu-item"><a href="#">Карта штата</a></li>
           <li class="main-menu-item"><a>Гостиницы</a></li>
+          <li class="main-menu-item"><a href="#">Карта штата</a></li>
         </ul>
         <a href="/" class="header-logo">
           <img src="img/header-logo.png" width="138" height="69" alt="logo">
@@ -36,19 +36,21 @@
         </fieldset>
         <fieldset class="type-accomodation">
           <legend>Тип жилья:</legend>
-              <input type="checkbox" name="hotel" id="hotel" checked>
-              <label for="hotel">Гостиница </label>
-              <input type="checkbox" name="motel" id="motel" checked>
-              <label for="motel">Мотель</label>
-              <input type="checkbox" name="apartment" id="apartment" checked>
-              <label for="apartment">Апартаменты</label>
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">Гостиница </label>
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
+            <input type="checkbox" name="apartment" id="apartment" checked>
+            <label for="apartment">Апартаменты</label>
         </fieldset>
+        <div class="block-price-and-button">
         <fieldset class="price">
           <legend>Стоимость в сутки (Р):</legend>
             <output id="search-form-output"></output>
             <input type="range" min="0" max="3000" step="500">
         </fieldset>
           <input class="btn" type="submit" value="Показать">
+        </div>
       </form>
     </div>
     <div class="filters">
@@ -60,8 +62,8 @@
           <li class="filters-type"><button>По цене</button></li>
           <li class="filters-type"><button>По типу</button></li>
           <li class="filters-type"><button>По рейтингу</button></li>
-          <li class="filters-type"><button>▼</button></li>
-          <li class="filters-type"><button>▲</button></li>
+          <li class="filters-type filters-type-flushed"><button title="По убыванию">▼</button></li>
+          <li class="filters-type filters-type-flushed"><button title="По возрастанию">▲</button></li>
         </ul>
     </div>
     <table class="hotels-list">
@@ -74,8 +76,10 @@
             <h2>Amara Resort & Spa</h2>
               <b>Гостиница</b>
               <b>От 4000 Р.</b>
+          <div class="box-purchase">
             <a class="btn" href="#">Подробнее</a>
             <a class="btn" href="#">Забронировать</a>
+          </div>
           </div>
           <div class="rating-cell">
             <i class=icon-star>★</i><i class=icon-star>★</i><i class=icon-star>★</i><i class=icon-star>★</i>
@@ -92,8 +96,10 @@
             <h2>Desert Quail Inn</h2>
               <b>Мотель</b>
               <b>От 3000 Р.</b>
+          <div class="box-purchase">
             <a class="btn" href="#">Подробнее</a>
             <a class="btn" href="#">Забронировать</a>
+          </div>
           </div>
           <div class="rating-cell">
             <i class=icon-star>★</i><i class=icon-star>★</i><i class=icon-star>★</i>
@@ -109,8 +115,10 @@
             <h2>Villa at Poco Diablo</h2>
               <b>Апартаменты</b>
               <b>От 2000 Р.</b>
+          <div class="box-purchase">
             <a class="btn" href="#">Подробнее</a>
             <a class="btn" href="#">Забронировать</a>
+          </div>
           </div>
           <div class="rating-cell">
             <i class=icon-star>★</i><i class=icon-star>★</i>
@@ -126,9 +134,9 @@
         <a href="">#VisitSedona</a>
       </div>
       <div class="footer-social">
-        <a class="social-btn social-btn-twitter" href="#"></a>
-        <a class="social-btn social-btn-facebook" href="#"></a>
-        <a class="social-btn social-btn-youtube" href="#"></a>
+        <a class="social-btn social-btn-twitter" title="Мы в Twitter" href="#">Twitter</a>
+        <a class="social-btn social-btn-facebook" title="Мы на Facebook" href="#">Facebook</a>
+        <a class="social-btn social-btn-youtube" title="Мы на Youtube" href="#">Youtube</a>
       </div>
       <div class="footer-copyright">
         Website by
