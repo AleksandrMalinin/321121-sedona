@@ -37,13 +37,13 @@ h1, h2 {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 72px;
   outline: 1px solid red;
 }
 
 .container-padded {
-padding-right: 72px;
-padding-left: 72px;
+  padding-right: 72px;
+  padding-left: 72px;
+  outline: 1px solid red;
 }
 
 .main-navigation {
@@ -89,6 +89,7 @@ padding-left: 72px;
 .intro {
   text-align: center;
   min-height: 209px;
+  padding: 60px 350px 60px;
   outline: 1px solid blue;
 }
 
@@ -129,10 +130,21 @@ padding-left: 72px;
   outline: 1px solid blue;
 }
 
+.features-block.first-list {
+  padding-top: 55px;
+  padding-bottom: 85px;
+}
+
+.features-block.second-list {
+  padding-top: 55px;
+  padding-bottom: 60px;
+}
+
 .offer {
   position: relative;
   min-height: 292px;
   text-align: center;
+  padding: 60px 180px 55px;
   outline: 1px solid blue;
 }
 
@@ -142,6 +154,7 @@ padding-left: 72px;
   left: 0;
   right: 0;
   margin: auto;
+  padding: 35px 140px 35px;
   width: 575px;
   min-height: 85px;
   outline: 1px solid blue;
@@ -230,7 +243,8 @@ padding-left: 72px;
 .tag {
   float: left;
   width: 33%;
-  min-height: 120px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
   outline: 1px solid blue;
 }
@@ -238,7 +252,8 @@ padding-left: 72px;
 .footer-social {
   float: left;
   width: 33%;
-  min-height: 120px;
+  padding-top: 35px;
+  padding-bottom: 35px;
   text-align: center;
   outline: 1px solid blue;
 }
@@ -246,7 +261,8 @@ padding-left: 72px;
 .footer-copyright {
   float: left;
   width: 33%;
-  min-height: 120px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
   outline: 1px solid blue;
 }
@@ -258,13 +274,19 @@ padding-left: 72px;
 }
 
 .search-form {
+  padding-top: 30px;
+  padding-bottom: 30px;
   outline: 1px solid blue;
+}
+
+.search-form fieldset {
+  padding:0;
+  margin: 0;
 }
 
 .infrastructure {
   float: left;
   width: 241px;
-  min-height: 216px;
   outline: 1px solid blue;
 }
 
@@ -274,8 +296,7 @@ padding-left: 72px;
 
 .type-accomodation {
   float: left;
-  width: 475px;
-  min-height: 216px;
+  width: 487px;
   outline: 1px solid blue;
 }
 
@@ -285,7 +306,6 @@ padding-left: 72px;
 
 .price {
   width: 328px;
-  min-height: 150px;
   text-align: left;
 }
 
@@ -296,7 +316,7 @@ padding-left: 72px;
 }
 
 .block-price-and-button .btn {
-  margin-bottom: 35px;
+  margin-top: 30px;
 }
 
 .filters {
@@ -331,7 +351,7 @@ padding-left: 72px;
   list-style: none;
 }
 
-.filters-type:nth-child(1) {
+.filters-type:first-child {
   margin-left: 40px;
 }
 
@@ -344,23 +364,20 @@ padding-left: 72px;
   margin-left: 10px;
 }
 
-.hotel-list {
+.hotels-list {
   outline: 1px solid blue;
 }
 
-tr {
-  padding-top: 30px;
+.hotels-list tr {
   outline: 1px solid blue;
 }
 
-td {
+.hotels-list td {
   vertical-align: top;
-  padding: 30px 0;
-  margin: 0;
-  outline: 1px solid blue;
+  padding: 30px 0px;
 }
 
-.description {
+.hotels-list .description {
   padding-left: 30px;
   width: 921px;
 }
