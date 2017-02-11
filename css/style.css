@@ -5,6 +5,7 @@
 }
 
 body {
+  min-width: 1200px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -37,30 +38,42 @@ h1, h2 {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid red;
 }
 
 .container-padded {
   padding-right: 72px;
   padding-left: 72px;
-  outline: 1px solid red;
 }
 
 .main-navigation {
   position: relative;
-  min-height: 56px;
-  outline: 1px solid blue;
 }
 
 .main-menu {
   padding: 0;
   margin: 0;
+  padding: 20px 0;
   list-style: none;
 }
 
 .main-menu-item {
   float: left;
+  text-align: left;
   width: 20%;
+}
+
+.main-menu-item a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.main-menu-item a:hover {
+  color: #81b3d2;
+}
+
+.main-menu-item a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-menu-item:nth-child(n+3) {
@@ -68,12 +81,20 @@ h1, h2 {
   text-align: right;
 }
 
+.main-menu-item:first-child {
+  margin-right: 30px;
+}
+
+.main-menu-item:last-child {
+  margin-right: 30px;
+}
+
 .header-logo {
   position: absolute;
   top: 0;
   left: 50%;
   width: 140px;
-  outline: 1px solid blue;
+  min-height: 70px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -81,20 +102,21 @@ h1, h2 {
 /*main*/
 
 .promo {
-  min-height: 508px;
-  margin-bottom: 0;
-  outline: 1px solid blue;
+  min-height: 725px;
+  padding: 570px 350px 50px 350px;
+  background: #fff url("../img/background-and-fonts.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -56px;
 }
 
-.intro {
+.promo h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
   text-align: center;
-  min-height: 209px;
-  padding: 60px 350px 60px;
-  outline: 1px solid blue;
 }
 
-.features {
-  outline: 1px solid black;
+.promo span {
+  line-height: 26px;
 }
 
 .features-block {
@@ -102,76 +124,155 @@ h1, h2 {
   padding: 0;
   font-size: 0;
   text-align: center;
-  outline: 1px solid blue;
+  background-color: #81b3d2;
 }
 
 .features-block img {
   display: inline-block;
   vertical-align: middle;
-  width: 66%;
+  width: 800px;
 }
 
 .features-item {
   display: inline-block;
   vertical-align: middle;
-  width: 33%;
+  width: 400px;
   font-size: 14px;
-  padding: 0 10px;
-  outline: 1px solid blue;
+  padding: 0 60px;
+  position: relative;
 }
+
+.features-item::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 75px;
+  height: 72px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.housing {
+  background-image: url("../img/smart-1.png");
+}
+
+.food {
+  background-image: url("../img/smart-2.png");
+}
+
+.souvenirs {
+  background-image: url("../img/smart-3.png");
+}
+
+/*
+Со смарт объектами не понял как разобраться.
+*/
 
 .reason {
   display: inline-block;
   vertical-align: middle;
-  width: 34%;
-  padding: 0 30px;
-  text-align: center;
+  width: 400px;
+  padding: 20px 50px 5px;
   font-size: 14px;
-  outline: 1px solid blue;
+  color: #fff;
+}
+
+.reason h2 {
+  margin-top: 0;
+  margin-bottom: 23px;
+  padding: 0 60px;
+  color: #fff;
+}
+
+.reason p {
+  margin-top: 20px;
 }
 
 .features-block.first-list {
-  padding-top: 55px;
-  padding-bottom: 85px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: #fff;
+}
+
+.first-list h2 {
+  padding-top: 105px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.first-list p,
+.second-list p {
+  margin-bottom: 0;
 }
 
 .features-block.second-list {
-  padding-top: 55px;
+  padding-top: 45px;
   padding-bottom: 60px;
+  background-color: #eee;
+}
+
+.features-block.second-list h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0 80px;
 }
 
 .offer {
   position: relative;
-  min-height: 292px;
+  min-height: 290px;
   text-align: center;
-  padding: 60px 180px 55px;
-  outline: 1px solid blue;
+  padding: 0px 180px 0px 180px;
+  margin: 0;
 }
 
-.offer .btn {
+.offer h3 {
+  margin-top: 0;
+  padding-top: 53px;
+  margin-bottom: 27px;
+  font-size: 30px;
+  line-height: 1em;
+}
+
+.offer p {
+  padding: 0 120px;
+  line-height: 24px;
+}
+
+.offer-btn {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  padding: 35px 140px 35px;
-  width: 575px;
-  min-height: 85px;
-  outline: 1px solid blue;
+  padding: 30px 138px 30px;
+  width: 568px;
+  min-height: 86px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #766357;
+  text-decoration: none;
 }
 
+/*Скажи пожалуйста, что в итоге делать с картой?
+Я вставил ее в нормальном размере пока только. Но она
+должна залезать на прозрачный футер*/
 .search {
+  margin-top: -15px;
   position: relative;
   text-align: center;
-  outline: 1px solid blue;
 }
 
-.pull-left {
-  float: left;
+.form {
+  display: none;
 }
 
-.pull-right {
-  float: right;
+.form-show {
+  display: block;
 }
 
 .hotels-form {
@@ -185,13 +286,13 @@ h1, h2 {
   padding: 55px;
   font-weight: 700;
   background-color: #fff;
-  outline: 1px solid blue;
 }
 
-.hotels-form .pull-left,
-.hotels-form .pull-right {
-  max-width: 50%;
-  font-size: 0;
+.count {
+  height: 38px;
+  width: 38px;
+  background: #f2f2f2;
+  border: none;
 }
 
 .hotels-form label,
@@ -218,8 +319,38 @@ h1, h2 {
   width: 345px;
   margin-bottom: 30px;
   padding: 13px;
+  position: relative;
 }
 
+.hotels-form input[type="date"]::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  background-image: url("../img/calendar.png");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+}
+
+/*Это я увидел на одном сайте, не знаю правильно ли.
+И как заменить переключатели на календари?*/
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button
+{-webkit-appearance: none;
+    margin:0;}
+
+.hotels-form input:hover {
+  background-color: #ebebeb;
+}
+
+.hotels-form input:focus {
+  background-color: #fff;
+  outline: 2px solid #e5e5e5;
+}
+
+/*Не разобрался как сделать здесь переключатели.
+Они как я понял должныбыть вплотную к интпутам*/
 .hotels-form input[type="number"] {
   width: 38px;
   text-align: center;
@@ -235,59 +366,224 @@ h1, h2 {
 
 .hotels-form .btn {
   width: 100%;
+  min-height: 58px;
   margin-top: 55px;
+  background-color: #81b3d2;
+  color: #fff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hotels-form .btn:focus {
+  outline: none;
+}
+
+.hotels-form .btn:hover {
+  background-color: #669ec0;
+}
+
+.hotels-form .btn:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /*footer*/
 
+.main-footer {
+  padding: 0;
+  margin: 0;
+  min-height: 120px;
+  padding: 36px 0;
+}
+
 .tag {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 33%;
-  padding-top: 50px;
-  padding-bottom: 50px;
   text-align: center;
-  outline: 1px solid blue;
+  padding-top: 15px;
+}
+
+.tag a {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-decoration: none;
+  color: #000;
 }
 
 .footer-social {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 33%;
-  padding-top: 35px;
-  padding-bottom: 35px;
   text-align: center;
-  outline: 1px solid blue;
 }
 
 .footer-copyright {
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   width: 33%;
-  padding-top: 40px;
-  padding-bottom: 40px;
   text-align: center;
-  outline: 1px solid blue;
+  padding-top: 5px;
 }
+
+.footer-copyright a,
+.footer-copyright span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  margin-right: 5px;
+  background-color: #81b3d2;
+  vertical-align: middle;
+  position: relative;
+}
+
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprites.png");
+  background-repeat: no-repeat;
+}
+
+.social-btn-twitter::before {
+  background-position: -283.9943084716797px 0;
+  width: 17px;
+  height: 15px;
+}
+
+.social-btn-facebook::before {
+  background-position: -398.9943084716797px 0;
+	width: 10px;
+	height: 19px;
+}
+
+.social-btn-youtube::before {
+  background-position: -249.9857940673828px 0;
+	width: 20px;
+	height: 16px;
+}
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active::before {
+  background-color: #5496bd;
+  opacity: 0.3;
+}
+
+.footer-logo:hover .text {
+  fill: #81b3d2;
+}
+
+.footer-logo:hover .frame,
+.footer-logo:hover .top-hat {
+  stroke: #81b3d2;
+}
+
+.footer-logo:active .text {
+  fill: #e3e2e2;
+}
+
+.footer-logo:active .frame,
+.footer-logo:active .top-hat {
+  stroke: #e3e2e2;
+}
+
 
 /*main sedona-hotels*/
 
+.main-menu-item .active {
+  color: #766357;
+}
+
 .search-container {
-  outline: 1px solid blue;
+  background-image: url("../img/background-blurred.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .search-form {
   padding-top: 30px;
-  padding-bottom: 30px;
-  outline: 1px solid blue;
+  color: #fff;
+}
+
+.search-form legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  border: 0;
 }
 
 .search-form fieldset {
-  padding:0;
+  padding: 0;
   margin: 0;
+}
+
+.search-form fieldset:nth-child(2) {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.search-form .btn {
+  width: 136px;
+  height: 33px;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.search-form input[type="checkbox"] {
+  display: none;
+}
+
+.search-form input[type="checkbox"] + label {
+  display: block;
+  margin: 25px 0;
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-form input[type="checkbox"] + label::before {
+  content: "";
+  background-image: url("../img/sprites.png");
+  background-repeat: no-repeat;
+  background-position: -312.97157287597656px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+	height: 22px;
+}
+
+.search-form input[type="checkbox"]:checked + label::before {
+  content: "";
+  background-image: url("../img/sprites.png");
+  background-repeat: no-repeat;
+  background-position: -361.98863220214844px 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+	height: 22px;
 }
 
 .infrastructure {
   float: left;
   width: 241px;
-  outline: 1px solid blue;
 }
 
 .infrastructure label {
@@ -297,33 +593,64 @@ h1, h2 {
 .type-accomodation {
   float: left;
   width: 487px;
-  outline: 1px solid blue;
 }
 
 .type-accomodation label {
   display: block;
 }
 
-.price {
-  width: 328px;
-  text-align: left;
-}
-
 .block-price-and-button {
+  width: 328px;
   float: right;
   text-align: center;
-  outline: 1px solid blue;
 }
 
 .block-price-and-button .btn {
   margin-top: 30px;
 }
 
-.filters {
+.price {
+  text-align: left;
+}
+
+.price-controls {
   padding: 0;
   margin: 0;
+  height: 36px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+/*
+это я так и не разобрался как сделать этот сложный фильтр:( )
+*/
+
+
+.filters {
   font-size: 0;
-  outline: 1px solid blue;
+}
+
+.filters b {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-right: 46px;
+}
+
+.filters span {
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .search-form-results {
@@ -339,7 +666,36 @@ h1, h2 {
   width: 815px;
   padding: 0;
   font-size: 0px;
-  outline: 1px solid blue;
+}
+
+.filters-menu button {
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px dotted #81b3d2;
+  color: rgba(0, 0, 0, 0.3);
+  background: none;
+}
+
+.filters-menu button:focus {
+  outline: none;
+}
+
+.filters-menu .active {
+  color: #81b3d2;
+  border: none;
+}
+
+.filters-menu button:hover {
+  color: #81b3d2;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.filters-menu button:active {
+  color: #000;
 }
 
 .filters-type {
@@ -359,52 +715,141 @@ h1, h2 {
   float: right;
 }
 
-.filters-type-flushed {
+.filters-menu .filters-type-flushed {
   margin-right: 0;
   margin-left: 10px;
 }
 
-.hotels-list {
-  outline: 1px solid blue;
+.filters-type-flushed button {
+  border: none;
 }
 
-.hotels-list tr {
-  outline: 1px solid blue;
+.filters-type-flushed button:hover {
+  color: #000;
+  border: none;
+}
+
+.filters-type-flushed button:active {
+  color: #81b3d2;
+  border: none;
+}
+
+.hotels-list img{
+  margin-left: 72px;
+}
+
+
+/*Здесь не понимаю почему у таблицы и ячеек не появляется рамки*/
+.hotels-list table {
+  border: 5px solid red;
+}
+
+ tr {
 }
 
 .hotels-list td {
   vertical-align: top;
-  padding: 30px 0px;
+  padding: 27px 0;
 }
 
 .hotels-list .description {
+  padding-right: 72px;
   padding-left: 30px;
-  width: 921px;
+  width: 990px;
 }
 
 .hotel-cell {
   float: left;
   width: 50%;
+  height: 90px;
   text-align: left;
 }
 
 .hotel-cell h2 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.hotel-cell b {
+  display: inline-block;
+  width: 110px;
+  font-weight: normal;
+  margin-right: 6px;
 }
 
 .rating-cell {
   float: right;
   width: 50%;
+  height: 90px;
   text-align: right;
+}
+
+.rating-cell span {
+  color: #81b3d2;
+  font-size: 20px;
+  margin-left: 4px;
 }
 
 .rating-cell mark {
   display: block;
-  margin-top: 45px;
+  margin-top: 33px;
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
+  margin-left: 333px;
+}
+
+.description .title:hover {
+  color: #81b3d2;
+}
+
+.description .title:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .box-purchase {
   display: block;
   margin-top: 15px;
+  color: #666666;
+}
+
+.btn-left {
+  width: 110px;
+  height: 27px;
+  padding: 5px 15px;
+  text-align: center;
+  background-color: #81b3d2;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.btn-left:hover {
+  background-color: #669ec0;
+}
+
+.btn-left:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-right {
+  width: 142px;
+  height: 27px;
+  padding: 5px 15px;
+  text-align: center;
+  background-color: #766357;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-right:hover {
+  background-color: #604e43;
+}
+
+.btn-right:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
 }
