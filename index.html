@@ -54,7 +54,7 @@
         <div class="features-block">
           <img src="img/layer-2.jpg" width="800" height="256" alt="image-2">
           <div class="reason">
-            <h2>Там есть Мост Дьявола</h2>
+            <h2>Там есть<br> Мост Дьявола</h2>
             <span>№2</span>
             <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
           </div>
@@ -79,38 +79,38 @@
       </section>
       <div class="offer">
         <h3>Заинтересовались?</h3>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="offer-btn" href="#">Поиск гостиницы в Седоне</a>
       </div>
       <section class="search map">
         <img src="img/map.jpg" width="1200" height="593" alt="map">
-      <div class="form clearfix">
-        <form class="hotels-form" name="hotels-booking-form" action="?" method="get">
-          <label for="arrival">Дата заезда:</label>
-          <input type="date" name="arrival" value="" id="arrival">
-          <i class="icon-calendar"></i>
-          <label for="departure">Дата выезда:</label>
-          <input type="date" name="departure" value="" id="departure">
-          <i class="icon-calendar"></i>
-        <div class="adult-number">
-          <label for="adult">Взрослые:</label>
-          <button class="count">−</button>
-          <input type="number" name="adult" min="1" max="10" value="2" id="adult">
-          <button class="count">+</button>
+        <div class="form clearfix">
+          <form class="hotels-form" name="hotels-booking-form" action="?" method="get">
+            <label class="date-label" for="arrival">Дата заезда:</label>
+            <input type="text" name="arrival" value="24 Апреля 2017" id="arrival">
+            <i class="icon-calendar"></i>
+            <label class="date-label" for="departure">Дата выезда:</label>
+            <input type="text" name="departure" value="4 июля 2017" id="departure">
+            <i class="icon-calendar"></i>
+          <div class="adult-number">
+            <label for="adult">Взрослые:</label>
+            <button class="count"><span>−</span></button>
+            <input type="number" name="adult" min="1" max="10" value="2" id="adult">
+            <button class="count"><span>+</span></button>
+          </div>
+          <div class="children-number">
+            <label for="children">Дети:</label>
+            <button class="count"><span>−</span></button>
+            <input type="number" name="children" min="0" max="10" value="0" id="children">
+            <button class="count"><span>+</span></button>
+          </div>
+            <input class="btn" type="submit" value="Найти">
+          </form>
         </div>
-        <div class="children-number">
-          <label for="children">Дети:</label>
-          <button class="count">−</button>
-          <input type="number" name="children" min="0" max="10" value="0" id="children">
-          <button class="count">+</button>
-        </div>
-          <input class="btn" type="submit" value="Найти">
-        </form>
-      </div>
       </section>
     </main>
-    <footer class="main-footer">
-      <div class="container clearfix">
+    <div class="main-footer-block">
+      <footer class="main-footer container">
         <div class="tag">
           <a href="">#VisitSedona</a>
         </div>
@@ -129,9 +129,9 @@
             </svg>
           </a>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+    <script src="js/script.js">
+    </script>
   </body>
-  <script src="js/script.js">
-  </script>
 </html>

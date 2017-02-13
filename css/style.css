@@ -52,14 +52,15 @@ h1, h2 {
 .main-menu {
   padding: 0;
   margin: 0;
-  padding: 20px 0;
+  padding: 18px 0;
   list-style: none;
 }
 
 .main-menu-item {
   float: left;
-  text-align: left;
   width: 20%;
+
+  text-align: left;
 }
 
 .main-menu-item a {
@@ -94,7 +95,7 @@ h1, h2 {
   top: 0;
   left: 50%;
   width: 140px;
-  min-height: 70px;
+  max-height: 70px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -102,16 +103,14 @@ h1, h2 {
 /*main*/
 
 .promo {
-  min-height: 725px;
+  min-height: 724px;
   padding: 570px 350px 50px 350px;
-  background: #fff url("../img/background-and-fonts.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 -56px;
+  background: #dae8f1 url("../img/background-and-fonts.jpg") 0 -56px no-repeat;
 }
 
 .promo h1 {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
@@ -134,42 +133,38 @@ h1, h2 {
 }
 
 .features-item {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 400px;
   font-size: 14px;
-  padding: 0 60px;
-  position: relative;
+  padding: 0 58px;
 }
 
 .features-item::before {
-  content:"";
   position: absolute;
+  content:"";
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 75px;
-  height: 72px;
+  height: 75px;
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 
-.housing {
+.housing::before {
   background-image: url("../img/smart-1.png");
 }
 
-.food {
+.food::before {
   background-image: url("../img/smart-2.png");
 }
 
-.souvenirs {
+.souvenirs::before {
   background-image: url("../img/smart-3.png");
 }
-
-/*
-Со смарт объектами не понял как разобраться.
-*/
 
 .reason {
   display: inline-block;
@@ -191,9 +186,21 @@ h1, h2 {
   margin-top: 20px;
 }
 
+.reason span::before,
+.features-item span::before {
+  content: "—";
+  margin-right: 5px;
+}
+
+.reason span::after,
+.features-item span::after {
+  content: "—";
+  margin-left: 5px;
+}
+
 .features-block.first-list {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding-top: 55px;
+  padding-bottom: 82px;
   background-color: #fff;
 }
 
@@ -205,18 +212,22 @@ h1, h2 {
 
 .first-list p,
 .second-list p {
+  margin-top: 20px;
   margin-bottom: 0;
 }
 
+.second-list p {
+}
+
 .features-block.second-list {
-  padding-top: 45px;
+  padding-top: 48px;
   padding-bottom: 60px;
   background-color: #eee;
 }
 
 .features-block.second-list h2 {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0 80px;
 }
 
@@ -258,21 +269,13 @@ h1, h2 {
   text-decoration: none;
 }
 
-/*Скажи пожалуйста, что в итоге делать с картой?
-Я вставил ее в нормальном размере пока только. Но она
-должна залезать на прозрачный футер*/
 .search {
-  margin-top: -15px;
   position: relative;
-  text-align: center;
+  margin-top: -15px;
 }
 
-.form {
+.form-close {
   display: none;
-}
-
-.form-show {
-  display: block;
 }
 
 .hotels-form {
@@ -281,32 +284,18 @@ h1, h2 {
   right: 0;
   left: 0;
   margin: 0 auto;
-  width: 575px;
+  width: 568px;
   min-height: 395px;
+  padding: 0;
+  font-size: 0;
   padding: 55px;
   font-weight: 700;
   background-color: #fff;
 }
 
-.count {
-  height: 38px;
-  width: 38px;
-  background: #f2f2f2;
-  border: none;
-}
-
-.hotels-form label,
-.hotels-form input {
+.hotels-form label {
   display: inline-block;
   font-size: 14px;
-}
-
-.hotels-form .date-label {
-  width: 120px;
-}
-
-.hotels-form .number-label {
-  width: 120px;
 }
 
 .hotels-form input {
@@ -315,30 +304,26 @@ h1, h2 {
   background-color: #f2f2f2;
 }
 
-.hotels-form input[type="date"] {
+.hotels-form .date-label,
+.adult-number label {
+  width: 100px;
+  margin-right: 13px;
+}
+
+.hotels-form input[type="text"] {
   width: 345px;
   margin-bottom: 30px;
   padding: 13px;
-  position: relative;
-}
-
-.hotels-form input[type="date"]::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 9px;
+  font-family: inherit;
+  color: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
   background-image: url("../img/calendar.png");
   background-repeat: no-repeat;
-  width: 22px;
-  height: 22px;
+  background-position: 315px 8px;
 }
-
-/*Это я увидел на одном сайте, не знаю правильно ли.
-И как заменить переключатели на календари?*/
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-outer-spin-button
-{-webkit-appearance: none;
-    margin:0;}
 
 .hotels-form input:hover {
   background-color: #ebebeb;
@@ -349,19 +334,64 @@ input[type="date"]::-webkit-outer-spin-button
   outline: 2px solid #e5e5e5;
 }
 
-/*Не разобрался как сделать здесь переключатели.
-Они как я понял должныбыть вплотную к интпутам*/
 .hotels-form input[type="number"] {
   width: 38px;
+  font-size: 14px;
   text-align: center;
+}
+
+.hotels-form input[type="number"]::-webkit-inner-spin-button,
+.hotels-form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hotels-form input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .adult-number {
   float: left;
+  width: 50%;
 }
 
 .children-number {
   float: right;
+  width: 50%;
+}
+
+.children-number label {
+  margin-left: 51px;
+  margin-right: 25px;
+}
+
+.count {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  height: 38px;
+  width: 38px;
+  color: #a9a9a9;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.count span {
+  font-size: 20px;
+}
+
+.count:focus {
+  outline: none;
+}
+
+.count:hover {
+  color: #000;
+}
+
+.count:active {
+  color: #81b3d2;
 }
 
 .hotels-form .btn {
@@ -370,6 +400,7 @@ input[type="date"]::-webkit-outer-spin-button
   margin-top: 55px;
   background-color: #81b3d2;
   color: #fff;
+  font-family: inherit;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -391,19 +422,25 @@ input[type="date"]::-webkit-outer-spin-button
 
 /*footer*/
 
+.main-footer-block {
+  position: relative;
+}
+
 .main-footer {
-  padding: 0;
-  margin: 0;
-  min-height: 120px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   padding: 36px 0;
+  background-color: rgba(249, 251, 246, 0.9);
 }
 
 .tag {
   display: inline-block;
   vertical-align: top;
   width: 33%;
+  padding-top: 10px;
   text-align: center;
-  padding-top: 15px;
 }
 
 .tag a {
@@ -436,39 +473,40 @@ input[type="date"]::-webkit-outer-spin-button
 }
 
 .social-btn {
+  position: relative;
   display: inline-block;
   width: 46px;
   height: 48px;
   margin-right: 5px;
   background-color: #81b3d2;
   vertical-align: middle;
-  position: relative;
 }
 
 .social-btn::before {
-  content: "";
   position: absolute;
+  content: "";
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-image: url("../img/sprites.png");
   background-repeat: no-repeat;
 }
 
 .social-btn-twitter::before {
-  background-position: -283.9943084716797px 0;
+  background-position: -284px 0;
   width: 17px;
   height: 15px;
 }
 
 .social-btn-facebook::before {
-  background-position: -398.9943084716797px 0;
+  background-position: -399px 0;
 	width: 10px;
 	height: 19px;
 }
 
 .social-btn-youtube::before {
-  background-position: -249.9857940673828px 0;
+  background-position: -250px 0;
 	width: 20px;
 	height: 16px;
 }
@@ -500,6 +538,13 @@ input[type="date"]::-webkit-outer-spin-button
   stroke: #e3e2e2;
 }
 
+.footer-block {
+  padding: 0;
+  margin: 0;
+  min-height: 120px;
+  padding: 36px 0;
+}
+
 
 /*main sedona-hotels*/
 
@@ -508,13 +553,12 @@ input[type="date"]::-webkit-outer-spin-button
 }
 
 .search-container {
-  background-image: url("../img/background-blurred.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #3e739d url("../img/background-blurred.jpg") center no-repeat;
 }
 
 .search-form {
-  padding-top: 30px;
+  padding-top: 28px;
+  padding-bottom: 33px;
   color: #fff;
 }
 
@@ -528,20 +572,12 @@ input[type="date"]::-webkit-outer-spin-button
 .search-form fieldset {
   padding: 0;
   margin: 0;
+  border: none;
 }
 
 .search-form fieldset:nth-child(2) {
-  padding-left: 20px;
+  padding-left: 15px;
   margin: 0;
-}
-
-.search-form .btn {
-  width: 136px;
-  height: 33px;
-  border: 2px solid #fff;
-  background: none;
-  color: #fff;
-  text-transform: uppercase;
 }
 
 .search-form input[type="checkbox"] {
@@ -549,19 +585,19 @@ input[type="date"]::-webkit-outer-spin-button
 }
 
 .search-form input[type="checkbox"] + label {
-  display: block;
-  margin: 25px 0;
-  padding-left: 40px;
   position: relative;
+  display: block;
+  margin-top: 24px;
+  padding-left: 40px;
   cursor: pointer;
 }
 
 .search-form input[type="checkbox"] + label::before {
+  position: absolute;
   content: "";
   background-image: url("../img/sprites.png");
   background-repeat: no-repeat;
-  background-position: -312.97157287597656px 0;
-  position: absolute;
+  background-position: -313px 0;
   top: 0;
   left: 0;
   width: 22px;
@@ -569,12 +605,11 @@ input[type="date"]::-webkit-outer-spin-button
 }
 
 .search-form input[type="checkbox"]:checked + label::before {
+  position: absolute;
   content: "";
   background-image: url("../img/sprites.png");
   background-repeat: no-repeat;
-  background-position: -361.98863220214844px 0;
-  background-repeat: no-repeat;
-  position: absolute;
+  background-position: -362px 0;
   top: 0;
   left: 0;
   width: 26px;
@@ -599,43 +634,115 @@ input[type="date"]::-webkit-outer-spin-button
   display: block;
 }
 
-.block-price-and-button {
+.price-filter-block {
   width: 328px;
   float: right;
   text-align: center;
 }
 
-.block-price-and-button .btn {
-  margin-top: 30px;
+.price-filter-block legend {
+  margin-bottom: 10px;
 }
 
-.price {
+.price-filter-block fieldset {
   text-align: left;
 }
 
-.price-controls {
-  padding: 0;
-  margin: 0;
+.price-block {
+  position: relative;
   height: 36px;
   margin-bottom: 20px;
-  border: 2px solid #ffffff;
+  font-size: 0;
+  border: 2px solid #fff;
   border-radius: 2px;
 }
 
-.price-controls label {
-  display: inline-block;
+.price-block::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+}
 
+.price-block label {
+  display: inline-block;
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
-
   cursor: pointer;
 }
 
-/*
-это я так и не разобрался как сделать этот сложный фильтр:( )
-*/
+.price-block .min-price,
+.price-block .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
 
+.price-block input {
+  width: 50px;
+  padding: 10px 0;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  background: none;
+  border: none;
+}
+
+.range-block {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-block .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-block .bar {
+  width: 80%;
+  height: 2px;
+  background: #fff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.price-filter-block .btn {
+  width: 136px;
+  height: 35px;
+  border: 2px solid #fff;
+  background: transparent;
+  font-family: inherit;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+}
 
 .filters {
   font-size: 0;
@@ -669,11 +776,12 @@ input[type="date"]::-webkit-outer-spin-button
 }
 
 .filters-menu button {
-  font-size: 12px;
-  line-height: 18px;
   padding: 0;
   margin: 0;
   text-transform: uppercase;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
   border: none;
   border-bottom: 1px dotted #81b3d2;
   color: rgba(0, 0, 0, 0.3);
@@ -696,19 +804,20 @@ input[type="date"]::-webkit-outer-spin-button
 
 .filters-menu button:active {
   color: #000;
+  border: none;
 }
 
 .filters-type {
   display: inline-block;
   font-size: 12px;
-  padding-top: 40px;
-  padding-bottom: 37px;
+  padding-top: 35px;
+  padding-bottom: 32px;
   margin-right: 33px;
   list-style: none;
 }
 
 .filters-type:first-child {
-  margin-left: 40px;
+  margin-left: 38px;
 }
 
 .filters-type.filters-type-flushed {
@@ -738,23 +847,21 @@ input[type="date"]::-webkit-outer-spin-button
   margin-left: 72px;
 }
 
-
-/*Здесь не понимаю почему у таблицы и ячеек не появляется рамки*/
-.hotels-list table {
-  border: 5px solid red;
-}
-
- tr {
+.hotels-list {
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
 }
 
 .hotels-list td {
   vertical-align: top;
-  padding: 27px 0;
+  padding-top: 28px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #ccc;
 }
 
 .hotels-list .description {
   padding-right: 72px;
-  padding-left: 30px;
+  padding-left: 28px;
   width: 990px;
 }
 
@@ -774,7 +881,7 @@ input[type="date"]::-webkit-outer-spin-button
   display: inline-block;
   width: 110px;
   font-weight: normal;
-  margin-right: 6px;
+  margin-right: 3px;
 }
 
 .rating-cell {
@@ -795,8 +902,16 @@ input[type="date"]::-webkit-outer-spin-button
   margin-top: 33px;
   width: 110px;
   height: 27px;
+  color: #666;
   background-color: #f2f2f2;
   margin-left: 333px;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.description .title {
+  text-decoration: none;
+  color: #000;
 }
 
 .description .title:hover {
@@ -809,6 +924,8 @@ input[type="date"]::-webkit-outer-spin-button
 
 .box-purchase {
   display: block;
+  padding: 0;
+  font-size: 0;
   margin-top: 15px;
   color: #666666;
 }
@@ -816,9 +933,11 @@ input[type="date"]::-webkit-outer-spin-button
 .btn-left {
   width: 110px;
   height: 27px;
-  padding: 5px 15px;
+  padding: 5px 17px;
   text-align: center;
   background-color: #81b3d2;
+  font-size: 14px;
+  line-height: 21px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -837,9 +956,12 @@ input[type="date"]::-webkit-outer-spin-button
 .btn-right {
   width: 142px;
   height: 27px;
-  padding: 5px 15px;
+  padding: 5px 17px;
   text-align: center;
   background-color: #766357;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 21px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;

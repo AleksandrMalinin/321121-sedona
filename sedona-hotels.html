@@ -17,7 +17,7 @@
           <li class="main-menu-item"><a class="active">Гостиницы</a></li>
           <li class="main-menu-item"><a href="#">Карта штата</a></li>
         </ul>
-        <a href="/" class="header-logo">
+        <a href="index.html" class="header-logo">
           <img src="img/header-logo.png" width="138" height="69" alt="logo">
         </a>
       </nav>
@@ -44,20 +44,17 @@
             <input type="checkbox" name="apartment" id="apartment" checked>
             <label for="apartment">Апартаменты</label>
         </fieldset>
-        <div class="block-price-and-button">
-        <fieldset class="price">
-          <legend>Стоимость в сутки (Р):</legend>
-          <div class="price-controls">
-          <label class="min-price">
-            от
-            <input type="text" name="min-price" value="0">
-          </label>
-          <label class="max-price">
-            до
-          <input type="text" name="max-price" value="3000">
-          </label>
+        <div class="price-filter-block">
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+          <div class="price-block">
+            <label class="min-price">от</label>
+              <input type="text" name="min-price" value="0">
+
+            <label class="max-price">до</label>
+              <input type="text" name="max-price" value="3000">
           </div>
-          <div class="range-controls">
+          <div class="range-block">
             <div class="scale">
               <div class="bar"></div>
             </div>
@@ -74,13 +71,13 @@
         <b>Найдено: <output id="search-form-results">3</output></b>
         <span>Сортировка:</span>
       </div>
-        <ul class="filters-menu clearfix">
-          <li class="filters-type"><button class="active">По цене</button></li>
-          <li class="filters-type"><button>По типу</button></li>
-          <li class="filters-type"><button>По рейтингу</button></li>
-          <li class="filters-type filters-type-flushed"><button class="active" title="По убыванию">▼</button></li>
-          <li class="filters-type filters-type-flushed"><button title="По возрастанию">▲</button></li>
-        </ul>
+      <ul class="filters-menu clearfix">
+        <li class="filters-type"><button class="active">По цене</button></li>
+        <li class="filters-type"><button>По типу</button></li>
+        <li class="filters-type"><button>По рейтингу</button></li>
+        <li class="filters-type filters-type-flushed"><button class="active" title="По убыванию">▼</button></li>
+        <li class="filters-type filters-type-flushed"><button title="По возрастанию">▲</button></li>
+      </ul>
     </div>
     <table class="hotels-list container">
       <tr>
@@ -89,13 +86,13 @@
         </td>
         <td class="description clearfix">
           <div class="hotel-cell">
-            <h2><a class="title">Amara Resort & Spa</a></h2>
+            <h2><a class="title" href="#">Amara Resort & Spa</a></h2>
               <b>Гостиница</b>
               <b>От 4000 Р.</b>
-          <div class="box-purchase">
-            <a class="btn-left" href="#">Подробнее</a>
-            <a class="btn-right" href="#">Забронировать</a>
-          </div>
+            <div class="box-purchase">
+              <a class="btn-left" href="#">Подробнее</a>
+              <a class="btn-right" href="#">Забронировать</a>
+            </div>
           </div>
           <div class="rating-cell">
             <span class=icon-star>★</span><span class=icon-star>★</span><span class=icon-star>★</span><span class=icon-star>★</span>
@@ -109,13 +106,13 @@
         </td>
         <td class="description clearfix">
           <div class="hotel-cell">
-            <h2><a class="title">Desert Quail Inn</a></h2>
+            <h2><a class="title" href="#">Desert Quail Inn</a></h2>
               <b>Мотель</b>
               <b>От 3000 Р.</b>
-          <div class="box-purchase">
-            <a class="btn-left" href="#">Подробнее</a>
-            <a class="btn-right" href="#">Забронировать</a>
-          </div>
+            <div class="box-purchase">
+              <a class="btn-left" href="#">Подробнее</a>
+              <a class="btn-right" href="#">Забронировать</a>
+            </div>
           </div>
           <div class="rating-cell">
             <span class=icon-star>★</span><span class=icon-star>★</span><span class=icon-star>★</span>
@@ -129,13 +126,13 @@
         </td>
         <td class="description clearfix">
           <div class="hotel-cell">
-            <h2><a class="title">Villa at Poco Diablo</a></h2>
+            <h2><a class="title" href="#">Villas at Poco Diablo</a></h2>
               <b>Апартаменты</b>
               <b>От 2000 Р.</b>
-          <div class="box-purchase">
-            <a class="btn-left" href="#">Подробнее</a>
-            <a class="btn-right" href="#">Забронировать</a>
-          </div>
+            <div class="box-purchase">
+              <a class="btn-left" href="#">Подробнее</a>
+              <a class="btn-right" href="#">Забронировать</a>
+            </div>
           </div>
           <div class="rating-cell">
             <span class=icon-star>★</span><span class=icon-star>★</span>
@@ -145,8 +142,8 @@
       </tr>
     </table>
   </main>
-  <footer class="main-footer">
-    <div class="container clearfix">
+  <footer class="footer-block">
+    <div class="container">
       <div class="tag">
         <a href="">#VisitSedona</a>
       </div>
