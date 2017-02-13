@@ -272,6 +272,8 @@ h1, h2 {
 .search {
   position: relative;
   margin-top: -15px;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
 }
 
 .form-close {
