@@ -226,7 +226,7 @@ h1, h2 {
 
 .features-block.second-list {
   padding-top: 48px;
-  padding-bottom: 60px;
+  padding-bottom: 59px;
   background-color: #eee;
 }
 
@@ -487,6 +487,7 @@ h1, h2 {
   vertical-align: top;
   width: 33%;
   text-align: center;
+  font-size: 0;
   padding-left: 10px;
 }
 
@@ -513,7 +514,7 @@ h1, h2 {
   display: inline-block;
   width: 46px;
   height: 48px;
-  margin-right: 5px;
+  margin-right: 6px;
   background-color: #81b3d2;
   vertical-align: middle;
 }
@@ -939,6 +940,7 @@ h1, h2 {
   float: left;
   width: 50%;
   height: 90px;
+  font-size: 0;
   text-align: left;
 }
 
@@ -950,9 +952,11 @@ h1, h2 {
 .hotel-cell b {
   display: inline-block;
   width: 110px;
-  font-weight: normal;
-  margin-right: 3px;
+  margin-right: 5px;
   margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
 }
 
 .rating-cell {
