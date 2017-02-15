@@ -32,7 +32,7 @@
               <label for="swimming-pool">Бассейн</label>
               <input type="checkbox" name="parking" id="parking">
               <label for="parking">Парковка</label>
-              <input type="checkbox" name="wi-fi" id="wi-fi">
+              <input type="checkbox" name="wi-fi" id="wi-fi" disabled>
               <label for="wi-fi">Wi-Fi</label>
         </fieldset>
         <fieldset class="type-accomodation">
@@ -41,7 +41,7 @@
             <label for="hotel">Гостиница</label>
             <input type="checkbox" name="motel" id="motel" checked>
             <label for="motel">Мотель</label>
-            <input type="checkbox" name="apartment" id="apartment" checked>
+            <input type="checkbox" name="apartment" id="apartment" checked disabled>
             <label for="apartment">Апартаменты</label>
         </fieldset>
         <div class="price-filter-block">
@@ -50,7 +50,6 @@
           <div class="price-block">
             <label class="min-price">от</label>
               <input type="text" name="min-price" value="0">
-
             <label class="max-price">до</label>
               <input type="text" name="max-price" value="3000">
           </div>
@@ -94,8 +93,7 @@
               <a class="btn-right" href="#">Забронировать</a>
             </div>
           </div>
-          <div class="rating-cell">
-            <span class=icon-star>★</span><span class=icon-star>★</span><span class=icon-star>★</span><span class=icon-star>★</span>
+          <div class="rating-cell stars-rating-first">
             <mark>Рейтинг: 8,5</mark>
           </div>
         </td>
@@ -114,8 +112,7 @@
               <a class="btn-right" href="#">Забронировать</a>
             </div>
           </div>
-          <div class="rating-cell">
-            <span class=icon-star>★</span><span class=icon-star>★</span><span class=icon-star>★</span>
+          <div class="rating-cell stars-rating-second">
             <mark>Рейтинг: 8,9</mark>
           </div>
         </td>
@@ -134,8 +131,7 @@
               <a class="btn-right" href="#">Забронировать</a>
             </div>
           </div>
-          <div class="rating-cell">
-            <span class=icon-star>★</span><span class=icon-star>★</span>
+          <div class="rating-cell stars-rating-third">
             <mark>Рейтинг: 9,2</mark>
           </div>
         </td>
@@ -153,7 +149,7 @@
         <a class="social-btn social-btn-youtube" title="Мы на Youtube" href="#"></a>
       </div>
       <div class="footer-copyright">
-        Website by
+        <span>Website by</span>
         <a href="https://htmlacademy.ru" class="footer-logo">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 161 55" width="115" height="40">
             <path class="frame" d="M1.4 3.5l20.4-2.1 20.3 2.1V41L21.8 53 1.4 41V3.5z" fill="none" stroke="#000" stroke-width="2.791"/>

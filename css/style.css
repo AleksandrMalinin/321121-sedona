@@ -69,11 +69,11 @@ h1, h2 {
   text-decoration: none;
 }
 
-.main-menu-item a:hover {
+.main-menu-item a:not(.active):hover {
   color: #81b3d2;
 }
 
-.main-menu-item a:active {
+.main-menu-item a:not(.active):active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -150,7 +150,7 @@ h1, h2 {
   margin: 0 auto;
   width: 75px;
   height: 75px;
-  background-position: 0 0;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -170,20 +170,28 @@ h1, h2 {
   display: inline-block;
   vertical-align: middle;
   width: 400px;
-  padding: 20px 50px 5px;
+  padding: 20px 55px 5px;
   font-size: 14px;
   color: #fff;
 }
 
+
+/*Короче я все уже перепробовал, все возможные значения. Не хочет и все!*/
 .reason h2 {
   margin-top: 0;
   margin-bottom: 23px;
-  padding: 0 60px;
+  padding: 0 24.8%;
   color: #fff;
+  background-color: red;
 }
 
 .reason p {
   margin-top: 20px;
+}
+
+.reason:last-child {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .reason span::before,
@@ -199,8 +207,8 @@ h1, h2 {
 }
 
 .features-block.first-list {
-  padding-top: 55px;
-  padding-bottom: 82px;
+  padding-top: 56px;
+  padding-bottom: 80px;
   background-color: #fff;
 }
 
@@ -216,9 +224,6 @@ h1, h2 {
   margin-bottom: 0;
 }
 
-.second-list p {
-}
-
 .features-block.second-list {
   padding-top: 48px;
   padding-bottom: 60px;
@@ -229,6 +234,10 @@ h1, h2 {
   margin-top: 0;
   margin-bottom: 25px;
   padding: 0 80px;
+}
+
+.nice-road {
+  padding: 0 2px;
 }
 
 .offer {
@@ -322,9 +331,29 @@ h1, h2 {
   font-weight: bold;
   line-height: 26px;
   text-transform: uppercase;
+}
+
+.date {
+  position: relative;
+}
+
+.icon-calendar {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 21px;
+  height: 22px;
   background-image: url("../img/calendar.png");
+  background-position: 0 0;
   background-repeat: no-repeat;
-  background-position: 315px 8px;
+}
+
+.icon-calendar:hover {
+  background-image: url("../img/calendar-black.png");
+}
+
+.icon-calendar:active {
+  background-image: url("../img/calendar-blue.png");
 }
 
 .hotels-form input:hover {
@@ -458,6 +487,7 @@ h1, h2 {
   vertical-align: top;
   width: 33%;
   text-align: center;
+  padding-left: 10px;
 }
 
 .footer-copyright {
@@ -465,13 +495,17 @@ h1, h2 {
   vertical-align: middle;
   width: 33%;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 4px;
 }
 
-.footer-copyright a,
+.footer-copyright .footer-logo,
 .footer-copyright span {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+}
+
+.footer-copyright span {
+  padding: 8px 5px 0 5px;
 }
 
 .social-btn {
@@ -547,7 +581,6 @@ h1, h2 {
   padding: 36px 0;
 }
 
-
 /*main sedona-hotels*/
 
 .main-menu-item .active {
@@ -602,20 +635,34 @@ h1, h2 {
   background-position: -313px 0;
   top: 0;
   left: 0;
-  width: 22px;
+  width: 26px;
 	height: 22px;
 }
 
 .search-form input[type="checkbox"]:checked + label::before {
-  position: absolute;
-  content: "";
   background-image: url("../img/sprites.png");
   background-repeat: no-repeat;
   background-position: -362px 0;
-  top: 0;
-  left: 0;
   width: 26px;
 	height: 22px;
+}
+
+.search-form input[type="checkbox"]:checked:disabled + label::before {
+  background-image: url("../img/disabled-checkbox.png");
+  background-position: -1px 0;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 22px;
+  cursor: not-allowed;
+}
+
+.search-form input[type="checkbox"]:disabled + label::before {
+  background-image: url("../img/empty-disabled-checkbox.png");
+  background-repeat: no-repeat;
+  background-position: -1px 0;
+  width: 22px;
+  height: 22px;
+  cursor: not-allowed;
 }
 
 .infrastructure {
@@ -643,7 +690,7 @@ h1, h2 {
 }
 
 .price-filter-block legend {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .price-filter-block fieldset {
@@ -652,7 +699,9 @@ h1, h2 {
 
 .price-block {
   position: relative;
+  width: 318px;
   height: 36px;
+  margin-left: 10px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid #fff;
@@ -689,6 +738,7 @@ h1, h2 {
   padding: 10px 0;
   margin: 0;
   color: #fff;
+  font-family: inherit;
   font-size: 14px;
   background: none;
   border: none;
@@ -696,6 +746,8 @@ h1, h2 {
 
 .range-block {
   position: relative;
+  width: 318px;
+  margin-left: 10px;
   margin-bottom: 32px;
 }
 
@@ -713,16 +765,27 @@ h1, h2 {
 .range-toggle {
   position: absolute;
   top: -9px;
-  width: 4px;
-  height: 4px;
-  background: #ababab;
-  border: 8px solid #ffffff;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
-.range-toggle:hover {
+.range-toggle::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.range-toggle:hover::before {
   background: #1c4f80;
 }
 
@@ -744,6 +807,11 @@ h1, h2 {
   text-transform: uppercase;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.price-filter-block .btn:hover {
+  color: #000;
+  background: #fff;
 }
 
 .filters {
@@ -884,29 +952,48 @@ h1, h2 {
   width: 110px;
   font-weight: normal;
   margin-right: 3px;
+  margin-bottom: 14px;
 }
 
 .rating-cell {
+  position: relative;
   float: right;
   width: 50%;
   height: 90px;
   text-align: right;
 }
 
-.rating-cell span {
-  color: #81b3d2;
-  font-size: 20px;
-  margin-left: 4px;
+.rating-cell::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.stars-rating-first::before {
+  background-image: url("../img/stars-1.png");
+}
+
+.stars-rating-second::before {
+  background-image: url("../img/stars-2.png");
+}
+
+.stars-rating-third::before {
+  background-image: url("../img/stars-3.png");
 }
 
 .rating-cell mark {
   display: block;
-  margin-top: 33px;
+  margin-top: 63px;
   width: 110px;
   height: 27px;
   color: #666;
   background-color: #f2f2f2;
-  margin-left: 333px;
+  margin-left: 335px;
   text-align: center;
   padding-top: 4px;
 }
@@ -924,14 +1011,6 @@ h1, h2 {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.box-purchase {
-  display: block;
-  padding: 0;
-  font-size: 0;
-  margin-top: 15px;
-  color: #666666;
-}
-
 .btn-left {
   width: 110px;
   height: 27px;
@@ -943,7 +1022,7 @@ h1, h2 {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  margin-right: 6px;
+  margin-right: 5px;
 }
 
 .btn-left:hover {
