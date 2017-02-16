@@ -7,9 +7,9 @@
     <link href="css/normalize.css" rel="stylesheet" type="text/css" >
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="container">
     <header class="main-header">
-      <div class="container container-padded">
+      <div class="container-padded">
         <nav class="main-navigation">
           <ul class="main-menu clearfix">
             <li class="main-menu-item"><a href="#">Информация</a></li>
@@ -23,10 +23,12 @@
         </nav>
       </div>
     </header>
-    <main class="container">
+    <main>
       <div class="promo">
-        <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-        <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</span>
+        <div class="intro">
+          <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</span>
+        </div>
       </div>
       <section class="features">
         <div class="features-block">
@@ -82,8 +84,8 @@
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="offer-btn" href="#">Поиск гостиницы в Седоне</a>
       </div>
-      <section class="search map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838804.8438257396!2d-111.84741014545017!3d34.79131142491747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1487009236584" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <section class="search">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838804.8438257396!2d-111.84741014545017!3d34.79131142491747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1487009236584" width="1200" height="593" style="border:0" allowfullscreen></iframe>
         <div class="form clearfix">
           <form class="hotels-form" name="hotels-booking-form" action="?" method="get">
           <div class="date">
@@ -114,9 +116,9 @@
       </section>
     </main>
     <div class="main-footer-block">
-      <footer class="main-footer container">
+      <footer class="main-footer">
         <div class="tag">
-          <a href="">#VisitSedona</a>
+          <a href="#">#VisitSedona</a>
         </div>
         <div class="footer-social">
           <a class="social-btn social-btn-twitter" title="Мы в Twitter" href="#"></a>

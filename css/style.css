@@ -38,6 +38,7 @@ h1, h2 {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .container-padded {
@@ -102,19 +103,24 @@ h1, h2 {
 
 /*main*/
 
+/*Я исправил этот кусок: так лучше?*/
 .promo {
-  min-height: 724px;
-  padding: 570px 350px 50px 350px;
-  background: #dae8f1 url("../img/background-and-fonts.jpg") 0 -56px no-repeat;
+  padding-top: 508px;
+  background: #dae8f1 url("../img/background-and-fonts.jpg") 0 0 no-repeat;
 }
 
-.promo h1 {
+.intro {
+  padding: 61px 350px 50px 350px;
+  background-color: #fff;
+}
+
+.intro h1 {
   margin-top: 0;
   margin-bottom: 28px;
   text-align: center;
 }
 
-.promo span {
+.intro span {
   line-height: 26px;
 }
 
@@ -176,13 +182,14 @@ h1, h2 {
 }
 
 
-/*Короче я все уже перепробовал, все возможные значения. Не хочет и все!*/
+/*Подскажи пожалуйста как решить эту задачку. Повторюсь никак
+не получается. Если мне и удается перенести слово "мост", то оно переносится
+и встает на следующей строчке отдельно, а "дьявола" встает еще ниже.*/
 .reason h2 {
   margin-top: 0;
   margin-bottom: 23px;
   padding: 0 24.8%;
   color: #fff;
-  background-color: red;
 }
 
 .reason p {
@@ -278,11 +285,11 @@ h1, h2 {
   text-decoration: none;
 }
 
+/*И момент с картой: при выключенном js все ломается. */
 .search {
   position: relative;
   margin-top: -15px;
-  background-image: url(../img/map.jpg);
-  background-repeat: no-repeat;
+  background-image: green url("../img/map.jpg") 0 0 no-repeat;
 }
 
 .form-close {
@@ -576,10 +583,8 @@ h1, h2 {
 }
 
 .footer-block {
-  padding: 0;
-  margin: 0;
-  min-height: 120px;
   padding: 36px 0;
+  min-height: 120px;
 }
 
 /*main sedona-hotels*/
@@ -719,6 +724,9 @@ h1, h2 {
   background: #fff;
   transform: translate(-50%, -50%);
 }
+
+/*И вот, я тебя еще просил этот кусок проверить: тут у меня тоже как-то неоднозначно
+ведут себя label-ы и input-ы.*/
 
 .price-block label {
   display: inline-block;
