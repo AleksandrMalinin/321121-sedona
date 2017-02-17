@@ -183,7 +183,6 @@ h1, h2 {
   color: #fff;
 }
 
-
 /*Подскажи пожалуйста как решить эту задачку. Повторюсь никак
 не получается. Если мне и удается перенести слово "мост", то оно переносится
 и встает на следующей строчке отдельно, а "дьявола" встает еще ниже.*/
@@ -192,7 +191,6 @@ h1, h2 {
   margin-bottom: 23px;
   padding: 0 24%;
   color: #fff;
-  background-color: red;
 }
 
 .reason p {
@@ -290,8 +288,8 @@ h1, h2 {
   text-decoration: none;
 }
 
-/*И момент с картой: при выключенном js все ломается. */
 .search {
+  min-height: 593px;
   position: relative;
   background: green url("../img/map.jpg") 0 0 no-repeat;
 }
@@ -367,11 +365,11 @@ h1, h2 {
   background-image: url("../img/calendar-blue.png");
 }
 
-.hotels-form input:hover {
+.hotels-form input:not(.btn):hover {
   background-color: #ebebeb;
 }
 
-.hotels-form input:focus {
+.hotels-form input:not(.btn):focus {
   background-color: #fff;
   outline: 2px solid #e5e5e5;
 }
