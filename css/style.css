@@ -105,7 +105,6 @@ h1, h2 {
 
 /*main*/
 
-/*Я исправил этот кусок: так лучше?*/
 .promo {
   padding-top: 508px;
   background: #dae8f1 url("../img/background-and-fonts.jpg") 0 0 no-repeat;
@@ -183,14 +182,15 @@ h1, h2 {
   color: #fff;
 }
 
-/*Подскажи пожалуйста как решить эту задачку. Повторюсь никак
-не получается. Если мне и удается перенести слово "мост", то оно переносится
-и встает на следующей строчке отдельно, а "дьявола" встает еще ниже.*/
 .reason h2 {
   margin-top: 0;
   margin-bottom: 23px;
-  padding: 0 24%;
+  padding: 0 26.4%;
   color: #fff;
+}
+
+.reason b {
+  display: block;
 }
 
 .reason p {
@@ -733,9 +733,6 @@ input[type="checkbox"]:disabled + label {
   background: #fff;
   transform: translate(-50%, -50%);
 }
-
-/*И вот, я тебя еще просил этот кусок проверить: тут у меня тоже как-то неоднозначно
-ведут себя label-ы и input-ы.*/
 
 .price-block label {
   display: inline-block;

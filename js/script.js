@@ -19,7 +19,6 @@ link.addEventListener("click", function(event) {
 });
 
 form.addEventListener("submit", function(event) {
-    event.preventDefault();
     localStorage.setItem("adult", adult.value);
     localStorage.setItem("children", children.value);
 });
