@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 *,
 *::before,
 *::after {
@@ -188,8 +190,9 @@ h1, h2 {
 .reason h2 {
   margin-top: 0;
   margin-bottom: 23px;
-  padding: 0 24.8%;
+  padding: 0 24%;
   color: #fff;
+  background-color: red;
 }
 
 .reason p {
@@ -250,21 +253,23 @@ h1, h2 {
 .offer {
   position: relative;
   min-height: 290px;
-  text-align: center;
-  padding: 0px 180px 0px 180px;
   margin: 0;
+  padding: 0px 180px 0px 180px;
+  font-size: 0;
+  text-align: center;
 }
 
 .offer h3 {
   margin-top: 0;
   padding-top: 53px;
-  margin-bottom: 27px;
   font-size: 30px;
   line-height: 1em;
 }
 
 .offer p {
+  margin: 0;
   padding: 0 120px;
+  font-size: 14px;
   line-height: 24px;
 }
 
@@ -288,8 +293,7 @@ h1, h2 {
 /*И момент с картой: при выключенном js все ломается. */
 .search {
   position: relative;
-  margin-top: -15px;
-  background-image: green url("../img/map.jpg") 0 0 no-repeat;
+  background: green url("../img/map.jpg") 0 0 no-repeat;
 }
 
 .form-close {
@@ -374,7 +378,9 @@ h1, h2 {
 
 .hotels-form input[type="number"] {
   width: 38px;
+  font-family: inherit;
   font-size: 14px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -668,6 +674,11 @@ h1, h2 {
   background-position: -1px 0;
   width: 22px;
   height: 22px;
+  cursor: not-allowed;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: #6a6a6a;
   cursor: not-allowed;
 }
 
