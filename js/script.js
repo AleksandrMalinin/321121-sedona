@@ -1,24 +1,26 @@
 "use strict";
 
-var link = document.querySelector(".offer-btn");
-var popup = document.querySelector(".form");
-var form = popup.querySelector("form");
-var arrival = popup.querySelector("[name=arrival]");
-var departure = popup.querySelector("[name=departure]");
-var adult = popup.querySelector("[name=adult]");
-var children = popup.querySelector("[name=children]");
-var storageAdult = localStorage.getItem("adult");
-var storageChildren = localStorage.getItem("children");
+(function() {
+  var link = document.querySelector(".offer-btn"),
+  popup = document.querySelector(".form"),
+  form = popup.querySelector("form"),
+  arrival = popup.querySelector("[name=arrival]"),
+  departure = popup.querySelector("[name=departure]"),
+  adult = popup.querySelector("[name=adult]"),
+  children = popup.querySelector("[name=children]"),
+  storageAdult = localStorage.getItem("adult"),
+  storageChildren = localStorage.getItem("children");
 
-adult.value = storageAdult || "";
-children.value = storageChildren || "";
+  adult.value = storageAdult || "0";
+  children.value = storageChildren || "0";
 
-link.addEventListener("click", function(event) {
-  event.preventDefault();
-  popup.classList.toggle("form-close");
-});
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    popup.classList.toggle("form-close");
+  });
 
-form.addEventListener("submit", function(event) {
-    localStorage.setItem("adult", adult.value);
-    localStorage.setItem("children", children.value);
-});
+  form.addEventListener("submit", function(event) {
+      localStorage.setItem("adult", adult.value);
+      localStorage.setItem("children", children.value);
+  });
+})();

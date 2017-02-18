@@ -298,6 +298,18 @@ h1, h2 {
   display: none;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(50px);
+  }
+  50%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .hotels-form {
   position: absolute;
   top: 0;
@@ -311,6 +323,7 @@ h1, h2 {
   padding: 55px;
   font-weight: 700;
   background-color: #fff;
+  animation: bounce 0.7s;
 }
 
 .hotels-form label {
