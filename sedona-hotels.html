@@ -28,12 +28,12 @@
       <form class="search-form container-padded clearfix" name="search-form" action="search-results.php" method="get">
         <fieldset class="infrastructure">
           <legend>Инфраструктура:</legend>
-              <input type="checkbox" name="swimming-pool" id="swimming-pool" checked>
-              <label for="swimming-pool">Бассейн</label>
-              <input type="checkbox" name="parking" id="parking">
-              <label for="parking">Парковка</label>
-              <input type="checkbox" name="wi-fi" id="wi-fi" disabled>
-              <label for="wi-fi">Wi-Fi</label>
+            <input type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+            <label for="swimming-pool">Бассейн</label>
+            <input type="checkbox" name="parking" id="parking">
+            <label for="parking">Парковка</label>
+            <input type="checkbox" name="wi-fi" id="wi-fi" disabled>
+            <label for="wi-fi">Wi-Fi</label>
         </fieldset>
         <fieldset class="type-accomodation">
           <legend>Тип жилья:</legend>
@@ -48,10 +48,10 @@
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
           <div class="price-block">
-            <label class="min-price">от</label>
-              <input type="text" name="min-price" value="0">
-            <label class="max-price">до</label>
-              <input type="text" name="max-price" value="3000">
+            <label for="min-price" class="min-price">от</label>
+            <input type="text" name="min-price" value="0" id="min-price">
+            <label for="max-price" class="max-price">до</label>
+            <input type="text" name="max-price" value="3000" id="max-price">
           </div>
           <div class="range-block">
             <div class="scale">
@@ -60,7 +60,7 @@
             <div class="range-toggle range-toggle-min"></div>
             <div class="range-toggle range-toggle-max"></div>
           </div>
-        </fieldset>
+          </fieldset>
           <input class="btn" type="submit" value="Показать">
         </div>
       </form>
@@ -86,8 +86,8 @@
         <td class="description clearfix">
           <div class="hotel-cell">
             <h2><a class="title" href="#">Amara Resort & Spa</a></h2>
-              <b>Гостиница</b>
-              <b>От 4000 Р.</b>
+            <b>Гостиница</b>
+            <b>От 4000 Р.</b>
             <div class="box-purchase">
               <a class="btn-left" href="#">Подробнее</a>
               <a class="btn-right" href="#">Забронировать</a>
