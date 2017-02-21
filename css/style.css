@@ -15,6 +15,11 @@ body {
   color: #333;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container h1 {
   line-height: 1.2em;
 }
@@ -308,6 +313,10 @@ body {
   display: none;
 }
 
+@media all and (-ms-high-contrast:none) {
+.hotels-form input { height: 39px; }
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(50px);
@@ -333,13 +342,14 @@ body {
   padding: 55px;
   font-weight: 700;
   background-color: #fff;
-  animation: bounce 0.7s;
   box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  animation: bounce 0.7s;
 }
 
 .hotels-form .date-label {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 3px;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 26px;
@@ -350,6 +360,7 @@ body {
 .children-number label {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 3px;
   font-size: 14px;
   line-height: 26px;
   color: #000;
@@ -367,11 +378,12 @@ body {
 }
 
 .hotels-form input[type="text"] {
-  width: 345px;
   display: inline-block;
   vertical-align: middle;
+  width: 345px;
+  height: 39px;
   margin-bottom: 28px;
-  padding: 7px 10px 6px 10px;
+  padding: 6px 10px 7px 12px;
   font-family: inherit;
   color: inherit;
   font-size: 14px;
@@ -415,8 +427,9 @@ body {
 .hotels-form input[type="number"] {
   display: inline-block;
   vertical-align: middle;
-  padding: 7px 0 4px 0;
   width: 38px;
+  height: 39px;
+  padding: 7px 0 6px 0;
   font-family: inherit;
   font-size: 14px;
   line-height: 26px;
@@ -454,8 +467,7 @@ body {
   display: inline-block;
   vertical-align: middle;
   width: 38px;
-  padding: 7px 0;
-  font-size: 14px;
+  height: 39px;
   font-weight: bold;
   color: #a9a9a9;
   background-color: #f2f2f2;
@@ -992,7 +1004,7 @@ body {
 .image {
   display: inline-block;
   vertical-align: middle;
-  width: 135px;
+  max-width: 135px;
   margin-left: 72px;
 }
 
